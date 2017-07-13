@@ -9,6 +9,7 @@ from submit_form import SubmitForm
 app = Flask(__name__)
 Bootstrap(app)
 app.config['SECRET_KEY'] = 'hard to guess string'
+app.config['WTF_CSRF_ENABLED'] = False
 
 
 @app.route('/', methods=['GET', 'POST'])
